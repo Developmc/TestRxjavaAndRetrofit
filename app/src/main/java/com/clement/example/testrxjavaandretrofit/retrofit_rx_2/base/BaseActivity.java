@@ -6,6 +6,7 @@ import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
 
 /**baseActivity
+ * 参考博客:http://www.jianshu.com/p/566912926427/comments/3660576
  * Created by clement on 16/11/7.
  */
 
@@ -29,6 +30,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        //RxJava取消注册,避免内存泄露
         if (this.mCompositeSubscription != null) {
             this.mCompositeSubscription.unsubscribe();
         }

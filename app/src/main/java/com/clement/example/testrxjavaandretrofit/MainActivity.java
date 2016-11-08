@@ -1,10 +1,10 @@
 package com.clement.example.testrxjavaandretrofit;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.clement.example.testrxjavaandretrofit.retrofit_rx.model.RetrofitEntity;
 import com.clement.example.testrxjavaandretrofit.retrofit_rx.service.ApiService;
+import com.clement.example.testrxjavaandretrofit.retrofit_rx_2.base.BaseActivity;
 import com.clement.example.testrxjavaandretrofit.retrofit_rx_2.entity.Video;
 import com.clement.example.testrxjavaandretrofit.retrofit_rx_2.http.APIFactory;
 import com.clement.example.testrxjavaandretrofit.retrofit_rx_2.subscriber.ProgressSubscriber;
@@ -19,7 +19,7 @@ import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
